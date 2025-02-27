@@ -1,2 +1,2 @@
-# My-repository
+# Django Practice
 Mgen
