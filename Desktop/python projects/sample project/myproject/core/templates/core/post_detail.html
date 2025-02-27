@@ -1,0 +1,24 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="mt-10 mb-10">
+    <div class="bg-white p-6 rounded-lg shadow-lg max-w-xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">{{ post.title }}</h2>
+        <p class="text-gray-600 mb-4">{{ post.content }}</p>
+        <p class="text-gray-500 mb-4"><strong>Created at:</strong> {{ post.created_at }}</p>
+
+        <!-- Buttons side by side -->
+        <div class="flex justify-center space-x-5">
+            <!-- Edit button -->
+            <a href="{% url 'update_post' post.id %}" class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Edit Post</a>
+
+            <!-- Delete button -->
+            <form method="POST" action="{% url 'delete_post' post.id %}">
+                {% csrf_token %}
+                <button type="submit" class="bg-red-500 text-white p-2 rounded hover:bg-red-600">Delete Post</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
