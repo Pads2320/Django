@@ -1,0 +1,24 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="flex flex-col items-center justify-center min-h-screen bg-blue-50 p-6">
+    <div class="bg-white shadow-lg rounded-2xl p-8 max-w-2xl w-full text-center">
+        <h1 class="text-3xl font-bold text-blue-700">Welcome to My Django Web App!</h1>
+        <p class="mt-4 text-gray-600">This is a basic home page with a modern design.</p>
+        
+        <!-- Horizontal Image Scroll Section -->
+        <div class="mt-6 overflow-x-auto whitespace-nowrap flex gap-4 py-2">
+            <img src="{% static 'images/imagess.jfif' %}" alt="Sample Image 1" class="h-40 rounded-lg shadow-md">
+            <img src="{% static 'images/images.jfif' %}" alt="Sample Image 2" class="h-40 rounded-lg shadow-md">
+            <img src="{% static 'images/download.jfif' %}" alt="Sample Image 3" class="h-40 rounded-lg shadow-md">            
+            <img src="{% static 'images/downloads.jfif' %}" alt="Sample Image 4" class="h-40 rounded-lg shadow-md">
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+  
