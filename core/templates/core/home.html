@@ -4,18 +4,19 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<div class="flex flex-col items-center justify-center min-h-screen bg-blue-50 p-6">
-    <div class="bg-white shadow-lg rounded-2xl p-8 max-w-2xl w-full text-center">
-        <h1 class="text-3xl font-bold text-blue-700">Welcome to My Django Web App!</h1>
-        <p class="mt-4 text-gray-600">This is a basic home page with a modern design.</p>
-        
+<div class="flex flex-col items-center justify-top min-h-screen bg-blue-50 p-6">
+    <div class="bg-white shadow-lg rounded-2xl p-8 max-w-10xl w-full text-center">
         <!-- Horizontal Image Scroll Section -->
-        <div class="mt-6 overflow-x-auto whitespace-nowrap flex gap-4 py-2">
+        <div class="mb-6 overflow-y-auto whitespace-nowrap flex gap-3">
             <img src="{% static 'images/imagess.jfif' %}" alt="Sample Image 1" class="h-40 rounded-lg shadow-md">
             <img src="{% static 'images/images.jfif' %}" alt="Sample Image 2" class="h-40 rounded-lg shadow-md">
             <img src="{% static 'images/download.jfif' %}" alt="Sample Image 3" class="h-40 rounded-lg shadow-md">            
             <img src="{% static 'images/downloads.jfif' %}" alt="Sample Image 4" class="h-40 rounded-lg shadow-md">
+            <img src="{% static 'images/earth.jfif' %}" alt="Sample Image 5" class="h-40 rounded-lg shadow-md">            
+            <img src="{% static 'images/astro.jfif' %}" alt="Sample Image 6" class="h-40 rounded-lg shadow-md">
         </div>
+        <h1 class="text-3xl font-bold text-blue-700">Welcome to My Django Web App!</h1>
+        <p class="mt-4 text-gray-600"></p>
     </div>
 </div>
 {% endblock %}
